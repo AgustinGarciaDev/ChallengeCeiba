@@ -150,7 +150,7 @@ class ContactTableViewCell: UITableViewCell {
             numberContactImageView.widthAnchor.constraint(equalToConstant: 16),
             numberContactImageView.heightAnchor.constraint(equalToConstant: 16),
 
-            emailContactImageView.widthAnchor.constraint(equalToConstant: 17),
+            emailContactImageView.widthAnchor.constraint(equalToConstant: 20),
             emailContactImageView.heightAnchor.constraint(equalToConstant: 16),
 
             publicationsButton.heightAnchor.constraint(equalToConstant: 45),
