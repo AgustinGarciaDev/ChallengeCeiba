@@ -21,7 +21,6 @@ class HomeUseCase: HomeUseCaseProtocol {
     }
 
     func getAllUsers(completionHandler: @escaping (Result<[UserModel], NSError>) -> Void) {
-
         api.getAllUsers { response in
             completionHandler(response)
         }

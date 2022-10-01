@@ -164,7 +164,7 @@ class ContactTableViewCell: UITableViewCell {
         numberContactLabel.text = telephone
     }
 
-    @objc func expandCell() {
+    @objc private func expandCell() {
         delegate?.touchButton(userId!, nameContactLabel.text!, emailContactLabel.text!, numberContactLabel.text!)
     }
 

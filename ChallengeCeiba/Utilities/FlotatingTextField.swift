@@ -91,14 +91,12 @@ class FlotatingTextField: UITextField {
     @objc private func dismiss() {
         self.endEditing(true)
     }
-
 }
 
 extension FlotatingTextField: UITextFieldDelegate {
     func addBottomBorder(height: CGFloat = 1.0) {
         borderView.backgroundColor = colorPrimary
         borderView.translatesAutoresizingMaskIntoConstraints = false
-        borderView.tag = 100
         addSubview(borderView)
         NSLayoutConstraint.activate(
             [

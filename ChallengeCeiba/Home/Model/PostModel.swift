@@ -8,6 +8,7 @@
 import Foundation
 
 // MARK: - Welcome
+
 struct PostModel: Decodable {
     let userId, id: Int
     let title, body: String

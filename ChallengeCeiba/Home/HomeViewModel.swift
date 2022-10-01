@@ -13,7 +13,6 @@ protocol HomeViewModelProtocol {
     func getAllUsersCoreData()
     func saveInformationUsers(users: [UserModel])
     func saveInformationPosts(posts: [PostModel])
-
 }
 
 protocol HomeViewModelUpdated {
@@ -66,7 +65,6 @@ class HomeViewModel: HomeViewModelProtocol {
         }
     }
 
-
     func getAllUsersCoreData() {
 
         let contextBackgound = persistentContainer.newBackgroundContext()
@@ -101,7 +99,7 @@ class HomeViewModel: HomeViewModelProtocol {
             do {
                 try context.save()
             } catch {
-                print("No se guardo la info \(error)")
+                print("No se guardo la info: \(error)")
             }
         }
 
@@ -123,7 +121,7 @@ class HomeViewModel: HomeViewModelProtocol {
                 do {
                     try self.context.save()
                 } catch {
-                    print("No se guardo la info \(error)")
+                    print("No se guardo la info: \(error)")
                 }
             }
           

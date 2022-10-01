@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     private var listsearchUsers = [NSManagedObject]()
     private var filteredData = false
 
-    var viewModel: HomeViewModel?
+    private var viewModel: HomeViewModel?
 
     lazy private var flotatingTextField: FlotatingTextField = {
         let textField = FlotatingTextField(placeholderLabel: "Buscar Usuario")
@@ -56,20 +56,16 @@ class HomeViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-    
-    override func viewWillAppear(_ animated: Bool) {
-        configurationNavBar()
-       }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurationNavBar()
         configurationViewController()
         builHierarchy()
         setupConstraints()
     }
 
     func configurationViewController() {
-      
         let useCase = HomeUseCase(api: RepositoriesAPI())
         let persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
         viewModel = HomeViewModel(useCase: useCase, view: self, persistentContainer: persistentContainer)
