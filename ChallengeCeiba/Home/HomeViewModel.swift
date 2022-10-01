@@ -126,8 +126,9 @@ class HomeViewModel: HomeViewModelProtocol {
                     print("No se guardo la info \(error)")
                 }
             }
-            self.getAllPostsCoreData()
+          
         }
+        self.getAllPostsCoreData()
     }
 
     func getAllPostsCoreData() {
