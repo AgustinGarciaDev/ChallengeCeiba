@@ -16,8 +16,6 @@ protocol HomeViewModelProtocol {
 }
 
 protocol HomeViewModelUpdated {
-    func startLoading()
-    func finishLoading()
     func setAllUser(users: [NSManagedObject])
     func setAllPosts(posts: [NSManagedObject])
     func showAlert(title: String, message: String)
@@ -86,7 +84,6 @@ class HomeViewModel: HomeViewModelProtocol {
 
     }
 
-
     func saveInformationUsers(users: [UserModel]) {
 
         users.forEach { user in
@@ -144,8 +141,5 @@ class HomeViewModel: HomeViewModelProtocol {
                 self.view.showAlert(title: "Error obtener información Posts", message: error.localizedDescription)
             }
         }
-
     }
-
-
 }

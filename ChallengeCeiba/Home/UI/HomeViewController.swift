@@ -187,15 +187,7 @@ extension HomeViewController: HomeViewModelUpdated, ButtonTouchDelegate {
 
         showSheetController(with: viewController)
     }
-
-    func startLoading() {
-
-    }
-
-    func finishLoading() {
-
-    }
-
+    
     func setAllUser(users: [NSManagedObject]) {
         listUsers = users
         listsearchUsers = users
